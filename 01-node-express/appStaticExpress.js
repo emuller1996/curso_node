@@ -4,6 +4,13 @@ const port = 3000
 
 app.use(express.static('public'));
 
+app.get('/',(req,res) => {
+  res.send('./public/index.html');
+});
+
+app.get('/servicios',(req,res) => {
+  res.send('public/servicios.html',);
+});
 
 
 app.listen(port, () => {
