@@ -1,7 +1,11 @@
-const https = require('https');
-const fs = require('fs');
+const express = require('express');
 
-https.createServer(options, (req, res) => {
-    res.writeHead(200);
-    res.end('hello world\n');
-  }).listen(8001);
+const app = express();
+
+app.get('/',(req,res)=>{
+res.send('Hola Express');
+});
+
+app.listen(3002,()=>{
+    console.log('Servidor Iniciado . . .');
+});
