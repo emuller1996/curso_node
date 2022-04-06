@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title
+  link(rel='stylesheet' href='css/bootstrap.css')
+
+
+
+  header.d-flex.justify-content-center.py-4.bg-light.shadow
+    ul.nav.nav-pills
+      li.nav-item
+        a.nav-link.active(href='#' aria-current='page') Home
+      li.nav-item
+        a.nav-link(href='#') Features
+      li.nav-item
+        a.nav-link(href='#') Pricing
+      li.nav-item
+        a.nav-link(href='#') FAQs
+      li.nav-item
+        a.nav-link(href='#') About
+
+
+.container.mt-4
+  #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+    .carousel-indicators
+      button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='./img/1.jpg' alt='...')
+      .carousel-item
+        img.d-block.w-100(src='./img/2.jpg' alt='...')
+      .carousel-item
+        img.d-block.w-100(src='./img/3.jpg' alt='...')
+    button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next
+
+script(src='js/main.js')
+script(src='js/bootstrap.js')
