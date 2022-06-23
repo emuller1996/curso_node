@@ -31,8 +31,8 @@ function getPersona(id){
         document.getElementById("nombre").value = json[0].nombre;
         document.getElementById("apellido").value = json[0].apellido;
         document.getElementById("edad").value = json[0].edad;
-        form_persona.setAttribute("action","http://127.0.0.1:3002/update")
-        form_persona.setAttribute("method","get")
+        form_persona.classList.add('editar');
+        form_persona.classList.remove('register');
       
     })
     .catch(error=>console.log(error));
@@ -44,6 +44,34 @@ document.addEventListener("click",e=>{
         getPersona(e.target.dataset.idpersona);
     }
 });
+
+form_persona.addEventListener("submit",e=>{
+    e.preventDefault();
+    var data2 = {
+        nombre: document.getElementById('nombre').value,
+        apellido :document.getElementById('apellido').value,
+        edad :document.getElementById('edad').value
+    }
+    console.log(data2)
+    
+
+    
+
+    if(e.target.matches(".register")){
+        fetch(`http://127.0.0.1:3002/addPersona`,{
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data2), // data can be `string` or {object}!
+            headers:{
+              'Content-Type': 'application/json'
+            }})
+        .then((response)=>console.log(response))
+        .catch((error)=>console.error(error));
+    }
+
+    if(e.target.matches(".editar")){
+        console.log("editar");
+    }
+})
 
 
 
