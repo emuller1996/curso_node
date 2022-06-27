@@ -44,7 +44,6 @@ app.post("/addPersona", (req, res) => {
 
   persona.save()
   .then(doc =>{
-    console.log('Insertado Correctamente . . .',doc);
     res.redirect('/')
   }).catch(error => console.log(error));
 });
@@ -61,8 +60,25 @@ app.get('/persona/:id',(req, res)=>{
   .then(persona => res.send(persona));
 });
 
-app.get('/update' , (req,res)=>{
-  res.send("sej")
+app.delete('/detelePerson', (req, res)=>{
+  const id = req.body.id;
+  Personas.findByIdAndDelete({_id:id})
+  .then(doc => {
+    res.json({response : "Borrado"});
+  });
+
+
+});
+
+app.put('/update' , (req,res)=>{
+  const id = req.body.id;
+  Personas.findByIdAndUpdate({_id:id},{$set : {
+    nombre : req.body.nombre,
+    apellido : req.body.apellido,
+    edad : req.body.edad}})
+    .then(doc => {
+        res.json({response : "Actualizado"});
+    })
 });
 
 app.listen(puerto, () => {
