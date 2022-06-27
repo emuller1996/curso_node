@@ -8,7 +8,19 @@ app.set('view engine', 'pug');
 
 
 app.get('/',(request,response)=>{
-    response.render('index', { title: 'Hey', message: 'Hello there!'});
+    response.render('index');
+});
+
+app.get('/Servicios',(request,response)=>{
+    response.render('services');
+});
+
+app.get('/Contacto',(request,response)=>{
+    response.render('contact');
+});
+
+app.get('/Equipo',(request,response)=>{
+    response.render('team');
 });
 
 

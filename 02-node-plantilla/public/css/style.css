@@ -1,0 +1,17 @@
+body{
+    font-family: 'Nunito Sans','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img-carousel{
+    width: 100%;
+    height: 50vh;
+}
+
+.img-team{
+    width: 100%;
+    height:100%;
+}
+
+.card-team{
+    height:100%;
+}

@@ -1,46 +1,45 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title
-  link(rel='stylesheet' href='css/bootstrap.css')
 
 
+include inc/head.pug
 
-  header.d-flex.justify-content-center.py-4.bg-light.shadow
-    ul.nav.nav-pills
-      li.nav-item
-        a.nav-link.active(href='#' aria-current='page') Home
-      li.nav-item
-        a.nav-link(href='#') Features
-      li.nav-item
-        a.nav-link(href='#') Pricing
-      li.nav-item
-        a.nav-link(href='#') FAQs
-      li.nav-item
-        a.nav-link(href='#') About
+include inc/navbar.pug
 
-
+//contenido
 .container.mt-4
-  #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
-    .carousel-indicators
-      button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
-      button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
-    .carousel-inner
-      .carousel-item.active
-        img.d-block.w-100(src='./img/1.jpg' alt='...')
-      .carousel-item
-        img.d-block.w-100(src='./img/2.jpg' alt='...')
-      .carousel-item
-        img.d-block.w-100(src='./img/3.jpg' alt='...')
-    button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
-      span.carousel-control-prev-icon(aria-hidden='true')
-      span.visually-hidden Previous
-    button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
-      span.carousel-control-next-icon(aria-hidden='true')
-      span.visually-hidden Next
+
+  .row
+    .col-6 
+      #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+        .carousel-indicators
+          button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+          button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+          button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
+        .carousel-inner
+          .carousel-item.active
+            img.d-block.img-carousel(src='https://st.depositphotos.com/1011643/3244/i/950/depositphotos_32444571-stock-photo-technical-support-operator-working-on.jpg' alt='...')
+          .carousel-item
+            img.d-block.img-carousel(src='https://static7.depositphotos.com/1000727/796/i/950/depositphotos_7960841-stock-photo-miniature-engineers-fixing-error-on.jpg' alt='...')
+          .carousel-item
+            img.d-block.img-carousel(src='https://st3.depositphotos.com/2572561/16360/i/1600/depositphotos_163607400-stock-photo-in-the-system-control-center.jpg' alt='...')
+        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+          span.carousel-control-prev-icon.bg-dark.rounded(aria-hidden='true')
+          span.visually-hidden Previous
+        button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+          span.carousel-control-next-icon.bg-dark.rounded(aria-hidden='true')
+          span.visually-hidden Next
+      
+    .col-6
+        h4.text-center Mision
+        p.text-center.p-2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sint, eveniet assumenda, dignissimos recusandae doloremque necessitatibus eligendi quasi fugit, dolorem consequuntur id doloribus? Earum aliquam incidunt nesciunt labore maxime adipisci. 
+        
+        h4.text-center Vision
+        p.text-center.p-2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sint, eveniet assumenda, dignissimos recusandae doloremque necessitatibus eligendi quasi fugit, dolorem consequuntur id doloribus? Earum aliquam incidunt nesciunt labore maxime adipisci. 
+        
+
+
+
+include inc/footer.pug
 
 script(src='js/main.js')
 script(src='js/bootstrap.js')

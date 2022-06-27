@@ -1,0 +1,39 @@
+doctype html
+
+
+include inc/head.pug
+
+include inc/navbar.pug
+
+//contenido
+
+.container.mt-4
+    .fs-2.fw-bold.text-center.mb-4 Nuestro Equipo
+    .row.g-2
+        .col.col-md-6.col-sm-12.col-12.col-xl-4
+            .card.shadow.border-2.card-team
+                img.card-img-top.img-fluid.img-team(src='https://st.depositphotos.com/1269204/1219/i/450/depositphotos_12196477-stock-photo-smiling-men-isolated-on-the.jpg' alt='...')
+                .card-body
+                    h5.card-title.text-center Ernesto Valverde
+                    p.text-center.text-muted Ingeniero Electronico,Tecnico en Mantenimiento y reparacion de computador 
+        
+        .col.col-md-6.col-sm-12.col-12.col-xl-4
+            .card.shadow.border-2.card-team
+                img.card-img-top.img-fluid.img-team(src='https://st.depositphotos.com/1987395/1219/i/450/depositphotos_19473595-stock-photo-young-casual-business-man.jpg' alt='...')
+                .card-body
+                    h5.card-title.text-center Quique Setien
+                    p.text-center.text-muted Ingeniero Sistema, Tecnico en Eletricidad
+        
+        .col.col-md-6.col-sm-12.col-12.col-xl-4
+            .card.shadow.border-2.card-team
+                img.card-img-top.img-fluid.img-team(src='https://st2.depositphotos.com/1010683/7422/i/950/depositphotos_74222015-stock-photo-caucasian-mature-man-in-blue.jpg' alt='...')
+                .card-body
+                    h5.card-title.text-center Kevin Mier 
+                    p.text-center.text-muted Ingeniero Mecatronico, Tecnico en Porteria
+                    
+
+
+include inc/footer.pug
+
+script(src='js/main.js')
+script(src='js/bootstrap.js')

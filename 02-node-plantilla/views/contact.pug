@@ -1,0 +1,34 @@
+doctype html
+
+
+include inc/head.pug
+
+include inc/navbar.pug
+
+//contenido
+.container.mt-4
+  .fs-2.fw-bold.text-center.mb-4 Contacto
+  .shadow
+    .card.body
+      form.w-75.mx-auto.m-4(action='' novalidate='')
+        .form-floating.mb-3
+          input#floatingInput.form-control(type='Nombre' placeholder='name@example.com')
+          label(for='floatingInput') Nombre
+        .form-floating.mb-3
+          input#floatingPassword.form-control(type='email' placeholder='Password')
+          label(for='floatingPassword') Correo Electronico
+        .form-floating.mb-3
+          input#floatingPassword.form-control(type='tel' placeholder='Password')
+          label(for='floatingPassword') Telefono
+        .form-floating.mb-3
+          input#floatingPassword.form-control(type='text' placeholder='Password')
+          label(for='floatingPassword') Asunto
+        .form-floating.mb-3
+          textarea#floatingTextarea.form-control(style='height: 200px' placeholder='Leave a comment here')
+          label(for='floatingTextarea') Mensaje
+        button.btn.btn-primary(type='submit') Enviar
+
+include inc/footer.pug
+
+script(src='js/main.js')
+script(src='js/bootstrap.js')

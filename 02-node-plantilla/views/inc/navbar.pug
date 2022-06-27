@@ -1,0 +1,29 @@
+// Navbar Start
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.shadow
+  .container-fluid
+    a.navbar-brand(href='/')
+      img.img-logo(style='width: 200px' src='img/logo.png' alt='')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item            
+          a.nav-link.fw-bold.text-uppercase.fs-6(aria-current='page' href='/') 
+            i.fas.fa-home
+            span.mx-2 Inicio
+        li.nav-item
+          a.nav-link.fw-bold.text-uppercase.fs-6(href='/Servicios')
+            i.fas.fa-globe
+            span.mx-2 Servicios
+
+        li.nav-item
+          a.nav-link.fw-bold.text-uppercase.fs-6(href='/Contacto')
+            i.fas.fa-envelope
+            span.mx-2 Contacto
+        li.nav-item
+          a.nav-link.fw-bold.text-uppercase.fs-6(href='/Equipo')
+            i.fas.fa-user-friends
+            span.mx-2 Nuestro Equipo
+        li.nav-item
+          a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') #nodeExpress#Pug
+// Navbar End
