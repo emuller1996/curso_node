@@ -50,8 +50,9 @@ app.post("/addPersona", (req, res) => {
 
 app.get('/getPersonas', (req,res)=>{
     Personas.find()
-    .then(personas => { 
+    .then(personas => {       
         res.json(personas);
+
     })
 });
 
